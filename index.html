@@ -2,28 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EduVision AR</title>
+    <title>DThink Project LMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-three.prod.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>EduVision AR</h1>
-        <p>Scan. Learn. Visualize.</p>
-    </header>
 
-    <div class="buttons">
-        <button onclick="startAR()">Start AR</button>
-        <button onclick="showSummary()">View Summary</button>
-        <button onclick="startQuiz()">Take Quiz</button>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">DThink LMS</div>
+        <ul class="nav-links">
+            <li class="active"><i class="fas fa-home"></i> Home</li>
+            <li><i class="fas fa-book"></i> My Courses</li>
+            <li><i class="fas fa-layer-group"></i> Course Catalogue</li>
+            <li><i class="fas fa-chart-bar"></i> Analytics</li>
+        </ul>
+        <div class="profile">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Statistics -->
+        <div class="card">
+            <h2>Your Statistics</h2>
+            <p>Courses Enrolled: <strong>5</strong></p>
+            <p>Courses Completed: <strong>3</strong></p>
+            <p>Certificates Earned: <strong>2</strong></p>
+            <p>Time Spent Learning: <strong>12h 30m</strong></p>
+        </div>
+
+        <!-- Planned Courses -->
+        <div class="card">
+            <h2>Your Planned Courses</h2>
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Introduction to Augmented Reality</td>
+                    <td><span class="badge progress">In Progress</span></td>
+                    <td><button>Resume</button></td>
+                </tr>
+                <tr>
+                    <td>Artificial Intelligence Basics</td>
+                    <td><span class="badge not-started">Not Started</span></td>
+                    <td><button>Start</button></td>
+                </tr>
+                <tr>
+                    <td>WebAR Development</td>
+                    <td><span class="badge completed">Completed</span></td>
+                    <td><button>View</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Available Courses -->
+        <
+div class="card">
+            <h2>New Available Courses</h2>
+            <ul class="course-list">
+                <li>Machine Learning Fundamentals</li>
+                <li>Data Science with Python</li>
+                <li>Cloud Computing Essentials</li>
+                <li>AR/VR for Education</li>
+            </ul>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card">
+            <h2>Your Achievements</h2>
+            <div class="achievements">
+                <span class="badge gold">🏆 Fast Learner</span>
+                <span class="badge gold">⭐ Great Start</span>
+                <span class="badge silver">📘 Explorer</span>
+                <span class="badge bronze">🔥 Consistent</span>
+            </div>
+        </div>
+
     </div>
 
-    <div id="summary" class="card"></div>
-    <div id="quiz" class="card"></div>
-
-    <div id="ar-container"></div>
 </body>
 </html>
