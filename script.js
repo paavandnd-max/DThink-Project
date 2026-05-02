@@ -1,3 +1,4 @@
+console.log("Script running");
 alert("JS loaded");
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -50,7 +50,44 @@
   </div>
 
 </div>
+<script>
+  // Dashboard
+  document.getElementById("dashboardBtn").onclick = function () {
+    window.location.href = "dashboard.html";
+  };
 
-<script src="./script.js?v=11" defer></script>
+  // AI Summary
+  document.getElementById("summaryBtn").onclick = function () {
+    const box = document.getElementById("summary");
+    box.innerHTML = "⏳ Generating summary...";
+
+    setTimeout(function () {
+      box.innerHTML = `
+        <div style="padding:10px; border-radius:10px; background:rgba(255,255,255,0.1);">
+          🤖 <strong>AI Summary</strong><br>
+          The solar system consists of planets orbiting the sun.
+        </div>
+      `;
+    }, 1000);
+  };
+
+  // AR
+  document.getElementById("arBtn").onclick = function () {
+    window.location.href = "ar.html";
+  };
+
+  // Quiz
+  document.getElementById("quizBtn").onclick = function () {
+    document.getElementById("quiz").innerHTML = `
+      <p>Which is the largest planet?</p>
+      <button onclick="checkAnswer('Jupiter')">Jupiter</button>
+      <button onclick="checkAnswer('Mars')">Mars</button>
+    `;
+  };
+
+  function checkAnswer(ans) {
+    alert(ans === "Jupiter" ? "✅ Correct!" : "❌ Try again");
+  }
+</script>
 </body>
 </html>
