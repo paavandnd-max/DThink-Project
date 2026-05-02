@@ -1,10 +1,11 @@
 alert("JS loaded");
-function goTo(page) {
+
+window.goTo = function(page) {
   console.log("Navigating to:", page);
   window.location.href = page;
-}
+};
 
-function getSummary() {
+window.getSummary = function() {
   const box = document.getElementById("summary");
 
   box.innerHTML = "⏳ Generating summary...";
@@ -17,16 +18,16 @@ function getSummary() {
       </div>
     `;
   }, 1000);
-}
+};
 
-function startQuiz() {
+window.startQuiz = function() {
   document.getElementById("quiz").innerHTML = `
     <p>Which is the largest planet?</p>
     <button onclick="checkAnswer('Jupiter')">Jupiter</button>
     <button onclick="checkAnswer('Mars')">Mars</button>
   `;
-}
+};
 
-function checkAnswer(ans) {
+window.checkAnswer = function(ans) {
   alert(ans === "Jupiter" ? "✅ Correct!" : "❌ Try again");
-}
+};
