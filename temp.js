@@ -1,3 +1,4 @@
+alert("JS loaded");
 function goTo(page) {
   console.log("Navigating to:", page);
   window.location.href = page;
