@@ -11,12 +11,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  function goTo(page) {
-    alert("Inline working: " + page);
-    window.location.href = page;
-  }
-</script>
 
 <body>
 
@@ -38,20 +32,20 @@
   <div class="card glow">
     <h2>🧠 AI Summary</h2>
     <p>Generate smart notes using Watson</p>
-    <button onclick="getSummary()">Generate</button>
+   <button id="summaryBtn">Generate</button>
     <div id="summary"></div>
   </div>
 
   <div class="card glow">
     <h2>🧊 AR Viewer</h2>
     <p>Visualize concepts in 3D</p>
-    <button onclick="goTo('ar.html')">Start AR</button>
+  <button id="arBtn">Start AR</button>
   </div>
 
   <div class="card glow">
     <h2>❓ Quiz</h2>
     <p>Test your understanding</p>
-    <button onclick="startQuiz()">Start Quiz</button>
+    <button id="quizBtn">Start Quiz</button>
     <div id="quiz"></div>
   </div>
 
